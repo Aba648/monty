@@ -75,11 +75,11 @@ void _function(op_func func, char *p, char *val, int ln, int format)
 			if (isdigit(val[i]) == 0)
 				handles_error(5, ln);
 		}
-		n = _n(atoi(val) * flag);
+		n = _node(atoi(val) * flag);
 		if (format == 0)
 			func(&n, ln);
 		if (format == 1)
-			(&n, ln);
+			add_2stack(&n, ln);
 	}
 	else
 		func(&head, ln);

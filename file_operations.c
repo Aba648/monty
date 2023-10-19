@@ -10,7 +10,7 @@ void op_file(char *path_name)
 	FILE *fd = fopen(path_name, "r");
 
 	if (path_name == NULL || fd == NULL)
-		err(2, path_name);
+		_err(2, path_name);
 
 	read_from_file(fd);
 	fclose(fd);
@@ -47,7 +47,7 @@ int tokenize_line(char *buffer, int line_num, int format)
 	const char *delim = "\n ";
 
 	if (buffer == NULL)
-		err(4);
+		_err(4);
 
 	opcode = strtok(buffer, delim);
 	if (opcode == NULL)
@@ -58,7 +58,7 @@ int tokenize_line(char *buffer, int line_num, int format)
 		return (0);
 	if (strcmp(opcode, "queue") == 0)
 		return (1);
-	
+
 	_execute(opcode, val, line_num, format);
 	return (format);
 }

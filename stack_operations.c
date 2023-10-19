@@ -10,7 +10,7 @@ stack_t *_node(int d)
 
 	n = malloc(sizeof(stack_t));
 	if (n == NULL)
-		err(4);
+		_err(4);
 	n->next = NULL;
 	n->prev = NULL;
 	n->n = d;
