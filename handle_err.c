@@ -38,33 +38,6 @@ void handles_error(int error, ...)
 	bfree();
 	exit(EXIT_FAILURE);
 }
-/**
- * string_err - handles errors.
- * @error: The error codes
- */
-void string_err(int error, ...)
-{
-	va_list ag;
-	int l;
-
-	va_start(ag, error);
-	l = va_arg(ag, int);
-	switch (error)
-	{
-		case 10:
-			fprintf(stderr, "L%d: can't pchar, value out of range\n", l);
-			break;
-		case 11:
-			fprintf(stderr, "L%d: can't pchar, stack empty\n", l);
-			break;
-		default:
-			break;
-	}
-	bfree();
-	exit(EXIT_FAILURE);
-}
-/**
- * _err - handles errors.
  * @error : The error code.
  */
 void _err(int error, ...)
@@ -92,6 +65,31 @@ void _err(int error, ...)
 		case 9:
 			fprintf(stderr, "L%d: division by zero\n",
 				va_arg(ag, unsigned int));
+			break;
+		default:
+			break;
+	}
+	bfree();
+	exit(EXIT_FAILURE);
+}
+/**
+ * string_err - handles errors.
+ * @error: The error codes
+ */
+void string_err(int error, ...)
+{
+	va_list ag;
+	int l;
+
+	va_start(ag, error);
+	l = va_arg(ag, int);
+	switch (error)
+	{
+		case 10:
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", l);
+			break;
+		case 11:
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", l);
 			break;
 		default:
 			break;
