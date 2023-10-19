@@ -30,7 +30,7 @@ typedef void (*op_func)(stack_t **, unsigned int);
 void _function(op_func func, char *p, char *val, int ln, int format);
 void _execute(char *opcode, char *val, int line, int format);
 /*file_operations.c*/
-stack_t *_node(int d);
+stack_t *_node(int n);
 void op_file(char *path_name);
 void read_from_file(FILE *fd);
 int tokenize_line(char *buffer, int line_num, int format);

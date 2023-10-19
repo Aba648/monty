@@ -8,8 +8,8 @@ stack_t *_node(int n)
 {
 	stack_t *d;
 
-	d = malloc(sizeof(stack_t));
-	if (d == NULL)
+	n = malloc(sizeof(stack_t));
+	if (n == NULL)
 		_err(4);
 	d->next = NULL;
 	d->prev = NULL;
