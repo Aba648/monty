@@ -41,5 +41,9 @@ void _err(int error, ...);
 void f_queue(stack_t **new_n, unsigned int line);
 /*free_strack*/
 void bfree(void);
-
+/*func_stacks*/
+void add_2stack(stack_t **new_node, __attribute__((unused))unsigned int ln);
+void display_stack(stack_t **stack, unsigned int line_number);
+void discard_top(stack_t **stack, unsigned int line_number);
+void display_top_node(stack_t **stack, unsigned int line_number);
 #endif
