@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
  * _node - crearts a node
- * @i: number to go inside the node.
+ * @n: number to go inside the node.
  * Return: upon sucess a pointer to the node. Otherwise NULL.
  */
-stack_t *_node(int i)
+stack_t *_node(int n)
 {
 	stack_t *d;
 
@@ -13,8 +13,8 @@ stack_t *_node(int i)
 		_err(4);
 	d->next = NULL;
 	d->prev = NULL;
-	d->i = i;
-	return (i);
+	d->n = n;
+	return (d);
 }
 /**
  * f_queue - prints the top

@@ -38,6 +38,8 @@ void handles_error(int error, ...)
 	bfree();
 	exit(EXIT_FAILURE);
 }
+/*
+ * _err - display errors
  * @error : The error code.
  */
 void _err(int error, ...)
