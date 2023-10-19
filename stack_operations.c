@@ -6,15 +6,15 @@
  */
 stack_t *_node(int n)
 {
-	stack_t *d;
-
-	n = malloc(sizeof(stack_t));
-	if (n == NULL)
+	stack_t *node;
+	
+	node = malloc(sizeof(stack_t));
+	if (node == NULL)
 		_err(4);
-	d->next = NULL;
-	d->prev = NULL;
-	d->n = n;
-	return (d);
+	node->next = NULL;
+	node->prev = NULL;
+	node->n = n;
+	return (node);
 }
 /**
  * f_queue - prints the top
