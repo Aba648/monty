@@ -18,27 +18,27 @@ stack_t *_node(int n)
 }
 /**
  * f_queue - prints the top
- * @new_n: pointer to the new node.
- * @line: line_number.
+ * @new_node: pointer to the new node.
+ * @ln: line_number.
  * Return: no return
  */
-void f_queue(stack_t **new_n, unsigned int line)
+void f_queue(stack_t **new_node, unsigned int ln)
 {
 	stack_t *tmp;
-	(void)line;
+	(void)ln;
 
-	if (new_n == NULL || *new_n == NULL)
+	if (new_node == NULL || *new_node == NULL)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
 	{
-		head = *new_n;
+		head = *new_node;
 		return;
 	}
 	tmp = head;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 
-	tmp->next = *new_n;
-	(*new_n)->prev = tmp;
+	tmp->next = *new_node;
+	(*new_node)->prev = tmp;
 
 }

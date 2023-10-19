@@ -2,13 +2,13 @@
 /**
  * _execute - executes the opcode
  * @opcode: opcode
- * @val: argument of opcode
+ * @value: argument of opcode
  * @format:  storage format. If 0 Nodes will be entered as a stack.
- * @line: line number
+ * @ln: line number
  * if 1 nodes will be entered as a queue.
  * Return: void
  */
-void _execute(char *opcode, char *val, int line, int format)
+void _execute(char *opcode, char *value, int ln, int format)
 {
 	int j;
 	int flag;
@@ -39,12 +39,12 @@ void _execute(char *opcode, char *val, int line, int format)
 	{
 		if (strcmp(opcode, func_list[j].opcode) == 0)
 		{
-			_function(func_list[j].f, opcode, val, line, format);
+			_function(func_list[j].f, opcode, value, ln, format);
 			flag = 0;
 		}
 	}
 	if (flag == 1)
-		handles_error(3, line, opcode);
+		handles_error(3, ln, opcode);
 }
 /**
  * _function - Calls the required function.
@@ -54,14 +54,14 @@ void _execute(char *opcode, char *val, int line, int format)
  * @ln: line numeber for the instruction.
  * @format: Format specifier. If 0 Nodes will be entered as a stack.
  */
-void _function(op_func func, char *p, char *val, int ln, int format)
+void _function(op_func func, char *op, char *val, int ln, int format)
 {
-	stack_t *n;
+	stack_t *node;
 	int i;
 	int flag;
 
 	flag = 1;
-	if (strcmp(p, "push") == 0)
+	if (strcmp(op, "push") == 0)
 	{
 		if (val != NULL && val[0] == '-')
 		{
@@ -75,11 +75,11 @@ void _function(op_func func, char *p, char *val, int ln, int format)
 			if (isdigit(val[i]) == 0)
 				handles_error(5, ln);
 		}
-		n = _node(atoi(val) * flag);
+		node = _node(atoi(val) * flag);
 		if (format == 0)
-			func(&n, ln);
+			func(&node, ln);
 		if (format == 1)
-			add_2stack(&n, ln);
+			f_queue(&node, ln);
 	}
 	else
 		func(&head, ln);

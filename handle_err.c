@@ -1,18 +1,17 @@
 #include "monty.h"
 
 /**
- * handles_error - Prints appropiate error messages
- *					determined by their error code.
- * @error : The error code.
+ * handles_error - display appropiate error .
+ * @error_code: the error code
  */
-void handles_error(int error, ...)
+void handles_error(int error_code, ...)
 {
 	va_list ag;
 	char *op;
-	int l;
+	int l_num;
 
-	va_start(ag, error);
-	switch (error)
+	va_start(ag, error_code);
+	switch (error_code)
 	{
 		case 1:
 			fprintf(stderr, "USAGE: monty file\n");
@@ -22,9 +21,9 @@ void handles_error(int error, ...)
 				va_arg(ag, char *));
 			break;
 		case 3:
-			l = va_arg(ag, int);
+			l_num = va_arg(ag, int);
 			op = va_arg(ag, char *);
-			fprintf(stderr, "L%d: unknown instruction %s\n", l, op);
+			fprintf(stderr, "L%d: unknown instruction %s\n", l_num, op);
 			break;
 		case 4:
 			fprintf(stderr, "Error: malloc failed\n");
@@ -38,18 +37,19 @@ void handles_error(int error, ...)
 	bfree();
 	exit(EXIT_FAILURE);
 }
-/*
- * _err - display errors
- * @error : The error code.
+
+/**
+ * _err - more errors.
+ * @error_code: the error codes.
  */
-void _err(int error, ...)
+void _err(int error_code, ...)
 {
 	va_list ag;
 	char *op;
-	int l;
+	int l_num;
 
-	va_start(ag, error);
-	switch (error)
+	va_start(ag, error_code);
+	switch (error_code)
 	{
 		case 6:
 			fprintf(stderr, "L%d: can't pint, stack empty\n",
@@ -60,9 +60,9 @@ void _err(int error, ...)
 				va_arg(ag, int));
 			break;
 		case 8:
-			l = va_arg(ag, unsigned int);
+			l_num = va_arg(ag, unsigned int);
 			op = va_arg(ag, char *);
-			fprintf(stderr, "L%d: can't %s, stack too short\n", l, op);
+			fprintf(stderr, "L%d: can't %s, stack too short\n", l_num, op);
 			break;
 		case 9:
 			fprintf(stderr, "L%d: division by zero\n",
@@ -74,24 +74,25 @@ void _err(int error, ...)
 	bfree();
 	exit(EXIT_FAILURE);
 }
+
 /**
- * string_err - handles errors.
- * @error: The error codes
+ * char_err - handles errors.
+ * @error_code: The error codes are the following:
  */
-void string_err(int error, ...)
+void char_err(int error_code, ...)
 {
 	va_list ag;
-	int l;
+	int l_num;
 
-	va_start(ag, error);
-	l = va_arg(ag, int);
-	switch (error)
+	va_start(ag, error_code);
+	l_num = va_arg(ag, int);
+	switch (error_code)
 	{
 		case 10:
-			fprintf(stderr, "L%d: can't pchar, value out of range\n", l);
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", l_num);
 			break;
 		case 11:
-			fprintf(stderr, "L%d: can't pchar, stack empty\n", l);
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", l_num);
 			break;
 		default:
 			break;

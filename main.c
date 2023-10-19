@@ -3,19 +3,19 @@ stack_t *head = NULL;
 
 /**
  * main - entry point
- * @ac: arguments count
- * @av: list of arguments
+ * @argc: arguments count
+ * @argv: list of arguments
  * Return: always 0
  */
 
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
-	if (ac != 2)
+	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	op_file(av[1]);
+	op_file(argv[1]);
 	bfree();
 	return (0);
 }

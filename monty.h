@@ -27,17 +27,17 @@ typedef void (*op_func)(stack_t **, unsigned int);
 
 /*all functions*/
 /*execute.c*/
-void _function(op_func func, char *p, char *val, int ln, int format);
-void _execute(char *opcode, char *val, int line, int format);
+void _function(op_func func, char *op, char *val, int ln, int format);
+void _execute(char *opcode, char *value, int ln, int format);
 /*file_operations.c*/
 stack_t *_node(int n);
 void op_file(char *path_name);
 void read_from_file(FILE *fd);
-int tokenize_line(char *buffer, int line_num, int format);
+int tokenize_line(char *buffer, int line_number, int format);
 /*handle_err.c*/
-void handles_error(int error, ...);
-void string_err(int error, ...);
-void _err(int error, ...);
+void handles_error(int error_code, ...);
+void _err(int error_code, ...);
+void char_err(int error_code, ...);
 void f_queue(stack_t **new_n, unsigned int line);
 /*free_strack*/
 void bfree(void);

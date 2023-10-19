@@ -11,7 +11,7 @@ void multiply_top_2(stack_t **stack, unsigned int line_number)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		handles_error(8, line_number, "mul");
+		_err(8, line_number, "mul");
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n * (*stack)->prev->n;
@@ -32,12 +32,9 @@ void calc_modulo(stack_t **stack, unsigned int line_number)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-
-		handles_error(8, line_number, "mod");
-
-
+		_err(8, line_number, "mod");
 	if ((*stack)->n == 0)
-		handles_error(9, line_number);
+		_err(9, line_number);
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n % (*stack)->prev->n;
 	(*stack)->n = sum;
