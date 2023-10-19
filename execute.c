@@ -39,7 +39,7 @@ void _execute(char *opcode, char *val, int line, int format)
 	{
 		if (strcmp(opcode, func_list[j].opcode) == 0)
 		{
-			_function(func_list[j].f, opcode, value, line, format);
+			_function(func_list[j].f, opcode, val, line, format);
 			flag = 0;
 		}
 	}
