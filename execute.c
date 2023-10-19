@@ -25,10 +25,10 @@ void _execute(char *opcode, char *val, int line, int format)
 		{"div", divise_top_2},
 		{"mul", multiply_top_2},
 		{"mod", calc_modulo},
-		{"pchar", print_char},
-		{"pstr", print_str},
-		{"rotl", rotl},
-		{"rotr", rotr},
+		{"pchar", print_ch_ascii},
+		{"pstr", print_ascii_string},
+		{"rotl", rot_stack_left},
+		{"rotr", rot_stack_right},
 		{NULL, NULL}
 	};
 
