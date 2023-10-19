@@ -25,7 +25,7 @@ void read_from_file(FILE *fd)
 {
 	int line_num, format = 0;
 	char *buffer = NULL;
-	size_t length= 0;
+	size_t length = 0;
 
 	for (line_num = 1; getline(&buffer, &length, fd) != -1; line_num++)
 	{

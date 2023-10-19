@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- * handles_error - Prints appropiate error messages determined by their error code.
+ * handles_error - Prints appropiate error messages
+ *					determined by their error code.
  * @error : The error code.
  */
 void handles_error(int error, ...)
@@ -39,7 +40,7 @@ void handles_error(int error, ...)
 }
 /**
  * string_err - handles errors.
- * @error: The error codes 
+ * @error: The error codes
  */
 void string_err(int error, ...)
 {

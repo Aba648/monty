@@ -25,7 +25,8 @@ void print_ch_ascii(stack_t **stack, unsigned int line_number)
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @ln: Interger representing the line number of of the opcode.
  */
-void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln)
+void print_ascii_string(stack_t **stack,
+__attribute__((unused))unsigned int ln)
 {
 	int ascii;
 	stack_t *tmp;

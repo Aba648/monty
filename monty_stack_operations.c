@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * void do_nothing - a placeholder opcode in the Monty language
+ * do_nothing - a placeholder opcode in the Monty language
  *					that doesn't perform any operation
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: Interger representing the line number of of the opcode.
@@ -15,10 +15,14 @@ void do_nothing(stack_t **stack, unsigned int line_number)
 
 /**
  * interchange_top - an opcode in the Monty language that
- * interchanges the positions of the top two elements on the stack. It verifies if
- * there are at least two elements on the stack before performing the swap. In case
- * this condition is not met, the function generates an error. If the condition is
- * satisfied, the function proceeds to swap the top two elements by adjusting the
+ * interchanges the positions of
+ * the top two elements on the stack. It verifies if
+ * there are at least two elements on the stack
+ * before performing the swap. In case
+ * this condition is not met,
+ * the function generates an error. If the condition is
+ * satisfied, the function proceeds to
+ * swap the top two elements by adjusting the
  * corresponding pointers.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: Interger representing the line number of of the opcode.
