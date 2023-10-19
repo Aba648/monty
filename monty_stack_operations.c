@@ -54,7 +54,7 @@ void add_top_2(stack_t **stack, unsigned int line_number)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		handles_error(8, line_number, "add");
+		_err(8, line_number, "add");
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n + (*stack)->prev->n;
@@ -75,7 +75,7 @@ void subtract_top_2(stack_t **stack, unsigned int line_number)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 
-		handles_error(8, line_number, "sub");
+		_err(8, line_number, "sub");
 
 
 	(*stack) = (*stack)->next;
@@ -96,10 +96,10 @@ void divise_top_2(stack_t **stack, unsigned int line_number)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		handles_error(8, line_number, "div");
+		_err(8, line_number, "div");
 
 	if ((*stack)->n == 0)
-		handles_error(9, line_number);
+		_err(9, line_number);
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = sum;
