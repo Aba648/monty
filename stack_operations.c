@@ -13,7 +13,7 @@ stack_t *_node(int d)
 		err(4);
 	n->next = NULL;
 	n->prev = NULL;
-	n->d = d;
+	n->n = d;
 	return (n);
 }
 /**

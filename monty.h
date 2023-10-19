@@ -46,4 +46,10 @@ void add_2stack(stack_t **new_node, __attribute__((unused))unsigned int ln);
 void display_stack(stack_t **stack, unsigned int line_number);
 void discard_top(stack_t **stack, unsigned int line_number);
 void display_top_node(stack_t **stack, unsigned int line_number);
+/*monty_stack_operations.c*/
+void do_nothing(stack_t **stack, unsigned int line_number);
+void interchange_top(stack_t **stack, unsigned int line_number);
+void add_top_2(stack_t **stack, unsigned int line_number);
+void subtract_top_2(stack_t **stack, unsigned int line_number);
+void divise_top_2(stack_t **stack, unsigned int line_number);
 #endif
