@@ -14,10 +14,10 @@ void _execute(char *opcode, char *val, int line, int format)
 	int flag;
 
 	instruction_t func_list[] = {
-		{"push", add_to_stack},
-		{"pall", print_stack},
-		{"pint", print_top},
-		{"pop", pop_top},
+		{"push", add_2stack},
+		{"pall", display_stack},
+		{"pint", display_top_node},
+		{"pop", discard_top},
 		{"nop", nop},
 		{"swap", swap_nodes},
 		{"add", add_nodes},
