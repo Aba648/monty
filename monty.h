@@ -56,9 +56,9 @@ void divise_top_2(stack_t **stack, unsigned int line_number);
 void multiply_top_2(stack_t **stack, unsigned int line_number);
 void calc_modulo(stack_t **stack, unsigned int line_number);
 /*output_operations*/
-void print_ch_ascii(stack_t **stack, unsigned int line_number);
-void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln);
-void rot_stack_left(stack_t **stack, __attribute__((unused))unsigned int ln);
-void rot_stack_right(stack_t **stack, __attribute__((unused))unsigned int ln);
+void print_ch_ascii(stack_t **, unsigned int);
+void print_ascii_string(stack_t **, unsigned int);
+void rot_stack_left(stack_t **, unsigned int);
+void rot_stack_right(stack_t **, unsigned int);
 
 #endif

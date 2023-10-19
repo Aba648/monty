@@ -7,7 +7,7 @@
 stack_t *_node(int n)
 {
 	stack_t *node;
-	
+
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
 		_err(4);
