@@ -26,6 +26,7 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*all functions*/
+int len_chars(FILE *);
 /*execute.c*/
 void _function(op_func func, char *p, char *val, int ln, int format);
 void _execute(char *opcode, char *val, int line, int format);

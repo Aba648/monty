@@ -79,7 +79,7 @@ void _function(op_func func, char *p, char *val, int ln, int format)
 		if (format == 0)
 			func(&n, ln);
 		if (format == 1)
-			add_2stack(&n, ln);
+			f_queue(&n, ln);
 	}
 	else
 		func(&head, ln);
