@@ -6,15 +6,15 @@
  */
 void print_ch_ascii(stack_t **stack, unsigned int line_number)
 {
-	int ascii;
+	int ch_ascii;
 
 	if (stack == NULL || *stack == NULL)
 		char_err(11, line_number);
 
-	ascii = (*stack)->n;
-	if (ascii < 0 || ascii > 127)
+	ch_ascii = (*stack)->n;
+	if (ch_ascii < 0 || ch_ascii > 127)
 		char_err(10, line_number);
-	printf("%c\n", ascii);
+	printf("%c\n", ch_ascii);
 }
 /**
  * print_ascii_string - Prints a string of ASCII characters
@@ -23,7 +23,7 @@ void print_ch_ascii(stack_t **stack, unsigned int line_number)
  */
 void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln)
 {
-	int ascii;
+	int ch_ascii;
 	stack_t *tmp;
 
 	if (stack == NULL || *stack == NULL)
@@ -35,10 +35,10 @@ void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		ascii = tmp->n;
-		if (ascii <= 0 || ascii > 127)
+		ch_ascii = tmp->n;
+		if (ch_ascii <= 0 || ch_ascii > 127)
 			break;
-		printf("%c", ascii);
+		printf("%c", ch_ascii);
 		tmp = tmp->next;
 	}
 	printf("\n");
