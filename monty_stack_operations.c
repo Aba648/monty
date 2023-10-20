@@ -35,7 +35,7 @@ void interchange_top(stack_t **stack, unsigned int line_number)
 
 /**
  * add_top_2 - adds the top two elements of the stack.
- * @stack: Pointer 
+ * @stack: Pointer
  * @line_number : the line number of of the opcode.
  */
 void add_top_2(stack_t **stack, unsigned int line_number)

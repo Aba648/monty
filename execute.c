@@ -3,9 +3,8 @@
  * _execute - executes the opcode
  * @opcode: opcode
  * @value: argument of opcode
- * @format:  storage format. If 0 Nodes will be entered as a stack.
+ * @format:  storage formate
  * @ln: line number
- * if 1 nodes will be entered as a queue.
  * Return: void
  */
 void _execute(char *opcode, char *value, int ln, int format)
@@ -47,12 +46,12 @@ void _execute(char *opcode, char *value, int ln, int format)
 		handles_error(3, ln, opcode);
 }
 /**
- * _function - Calls the required function.
- * @func: Pointer to the function that is about to be called.
- * @p: string representing the opcode.
- * @val: string representing a numeric value.
- * @ln: line numeber for the instruction.
- * @format: Format specifier. If 0 Nodes will be entered as a stack.
+ * _function - Calls the func.
+ * @func: Pointer to the func
+ * @op: string representing the opcode.
+ * @val: a numeric value.
+ * @ln: line numeber.
+ * @format: Format specifier.
  */
 void _function(op_func func, char *op, char *val, int ln, int format)
 {

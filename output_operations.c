@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * print_ch_ascii -  Prints the ASCII character
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * print_ch_ascii -  Prints the ASCII characted
+ * @stack: Pointer
+ * @line_number: the line number of of the opcode.
  */
 void print_ch_ascii(stack_t **stack, unsigned int line_number)
 {
@@ -18,14 +18,14 @@ void print_ch_ascii(stack_t **stack, unsigned int line_number)
 }
 /**
  * print_ascii_string - Prints a string of ASCII characters
- * represented by the stack elements
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * @stack: Pointer
+ * @ln: the line number of of the opcode.
  */
-void print_ascii_string(stack_t **stack,__attribute__((unused))unsigned int ln)
+void print_ascii_string(stack_t **stack, unsigned int ln)
 {
 	int ascii;
 	stack_t *tmp;
+	(void)ln;
 
 	if (stack == NULL || *stack == NULL)
 	{
@@ -47,13 +47,13 @@ void print_ascii_string(stack_t **stack,__attribute__((unused))unsigned int ln)
 
 /**
  * rot_stack_left - Rotates the stack by moving
- * the first element to the bottom
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * @stack: Pointer
+ * @ln: the line number of of the opcode.
  */
-void rot_stack_left(stack_t **stack, __attribute__((unused))unsigned int ln)
+void rot_stack_left(stack_t **stack, unsigned int ln)
 {
 	stack_t *tmp;
+	(void)ln;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;
@@ -72,13 +72,13 @@ void rot_stack_left(stack_t **stack, __attribute__((unused))unsigned int ln)
 
 /**
  * rot_stack_right - Rotates the stack
- * by moving the last element to the top.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * @stack: Pointer
+ * @ln: the line number of of the opcode.
  */
-void rot_stack_right(stack_t **stack, __attribute__((unused))unsigned int ln)
+void rot_stack_right(stack_t **stack, int ln)
 {
 	stack_t *tmp;
+	(void)ln;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;

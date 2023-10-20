@@ -1,9 +1,8 @@
 #include "monty.h"
 /**
- * multiply_top_2 -  Multiplies the top two elements on the stack,
- *                  replacing them with their product.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * multiply_top_2 -  multiplies the top two elements.
+ * @stack: Pointer
+ * @line_number: the line number of of the opcode.
  */
 void multiply_top_2(stack_t **stack, unsigned int line_number)
 {
@@ -19,10 +18,9 @@ void multiply_top_2(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * calc_modulo - Calculates the modulo of the top two elements on the stack,
- *                  updating the stack with the result
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * calc_modulo - Calculates the modulo.
+ * @stack: Pointer
+ * @line_number: the line number of of the opcode.
  */
 void calc_modulo(stack_t **stack, unsigned int line_number)
 {
