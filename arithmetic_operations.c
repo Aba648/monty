@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * multiply_top_2 -  Multiplies the top two elements on the stack,
  *                  replacing them with their product.
@@ -19,8 +18,6 @@ void multiply_top_2(stack_t **stack, unsigned int line_number)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
-
-
 /**
  * calc_modulo - Calculates the modulo of the top two elements on the stack,
  *                  updating the stack with the result

@@ -22,7 +22,7 @@ void interchange_top(stack_t **stack, unsigned int line_number)
 	stack_t *tmp;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		handles_error(8, line_number, "swap");
+		_err(8, line_number, "swap");
 	tmp = (*stack)->next;
 	(*stack)->next = tmp->next;
 	if (tmp->next != NULL)

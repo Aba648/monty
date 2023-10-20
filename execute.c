@@ -18,7 +18,7 @@ void _execute(char *opcode, char *value, int ln, int format)
 		{"pall", display_stack},
 		{"pint", display_top_node},
 		{"pop", discard_top},
-		{"do_nothing", do_nothing},
+		{"nop", do_nothing},
 		{"swap", interchange_top},
 		{"add", add_top_2},
 		{"sub", subtract_top_2},
