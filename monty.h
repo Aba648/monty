@@ -8,31 +8,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdarg.h>
-#ifndef MONTY_H
-#define MONTY_H
-/**
- * struct stack_s - doubly linked list representation of a stack (or queue)
- * @n: integer
- * @prev: points to the previous element of the stack (or queue)
- * @next: points to the next element of the stack (or queue)
- *
- * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO
- */
+
 typedef struct stack_s
 {
         int n;
         struct stack_s *prev;
         struct stack_s *next;
-}
-/**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
- *
- * Description: opcode and its function
- * for stack, queues, LIFO, FIFO
- */
+} stack_t;
+
 typedef struct instruction_s
 {
         char *opcode;
@@ -43,7 +26,6 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*all functions*/
-int len_chars(FILE *);
 /*execute.c*/
 void _function(op_func func, char *op, char *val, int ln, int format);
 void _execute(char *opcode, char *value, int ln, int format);
@@ -74,7 +56,7 @@ void divise_top_2(stack_t **stack, unsigned int line_number);
 void multiply_top_2(stack_t **stack, unsigned int line_number);
 void calc_modulo(stack_t **stack, unsigned int line_number);
 /*output_operations*/
-void print_ch_ascii(stack_t **, unsigned int);
+void print_ch_ascii(stack_t **stack, unsigned int line_number);
 void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln);
 void rot_stack_left(stack_t **stack, __attribute__((unused))unsigned int ln);
 void rot_stack_right(stack_t **stack, __attribute__((unused))unsigned int ln);
