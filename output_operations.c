@@ -21,11 +21,10 @@ void print_ch_ascii(stack_t **stack, unsigned int line_number)
  * @stack: Pointer
  * @ln: the line number of of the opcode.
  */
-void print_ascii_string(stack_t **stack, unsigned int ln)
+void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln)
 {
 	int ascii;
 	stack_t *tmp;
-	(void)ln;
 
 	if (stack == NULL || *stack == NULL)
 	{
@@ -50,10 +49,9 @@ void print_ascii_string(stack_t **stack, unsigned int ln)
  * @stack: Pointer
  * @ln: the line number of of the opcode.
  */
-void rot_stack_left(stack_t **stack, unsigned int ln)
+void rot_stack_left(stack_t **stack, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
-	(void)ln;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;
@@ -75,10 +73,9 @@ void rot_stack_left(stack_t **stack, unsigned int ln)
  * @stack: Pointer
  * @ln: the line number of of the opcode.
  */
-void rot_stack_right(stack_t **stack, int ln)
+void rot_stack_right(stack_t **stack, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
-	(void)ln;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;

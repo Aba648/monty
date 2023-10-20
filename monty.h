@@ -8,17 +8,31 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdarg.h>
-
+#ifndef MONTY_H
+#define MONTY_H
 /**
- * structure
+ * struct stack_s - doubly linked list representation of a stack (or queue)
+ * @n: integer
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct stack_s
 {
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
-} stack_t;
-
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
+}
+/**
+ * struct instruction_s - opcode and its function
+ * @opcode: the opcode
+ * @f: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
+ */
 typedef struct instruction_s
 {
         char *opcode;
@@ -46,7 +60,7 @@ void f_queue(stack_t **new_n, unsigned int line);
 /*free_strack*/
 void bfree(void);
 /*func_stacks*/
-void add_2stack(stack_t **new_node, unsigned int ln);
+void add_2stack(stack_t **new_node, __attribute__((unused))unsigned int ln);
 void display_stack(stack_t **stack, unsigned int line_number);
 void discard_top(stack_t **stack, unsigned int line_number);
 void display_top_node(stack_t **stack, unsigned int line_number);
@@ -61,8 +75,8 @@ void multiply_top_2(stack_t **stack, unsigned int line_number);
 void calc_modulo(stack_t **stack, unsigned int line_number);
 /*output_operations*/
 void print_ch_ascii(stack_t **, unsigned int);
-void print_ascii_string(stack_t **, unsigned int);
-void rot_stack_left(stack_t **, unsigned int);
-void rot_stack_right(stack_t **, unsigned int);
+void print_ascii_string(stack_t **stack, __attribute__((unused))unsigned int ln);
+void rot_stack_left(stack_t **stack, __attribute__((unused))unsigned int ln);
+void rot_stack_right(stack_t **stack, __attribute__((unused))unsigned int ln);
 
 #endif
