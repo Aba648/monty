@@ -75,7 +75,7 @@ void rot_stack_left(stack_t **stack, unsigned int ln)
  * @stack: Pointer
  * @ln: the line number of of the opcode.
  */
-void rot_stack_right(stack_t **stack, int ln)
+void rot_stack_right(stack_t **stack, unsigned int ln)
 {
 	stack_t *tmp;
 	(void)ln;
